@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/044bd81bea.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="w-100 h-100 bg-all top-0 z-1 d-flex justify-content-center d-none align-items-center ">
+      <div class="bg-validd rounded-3 bg-warning">
+        <i onclick="removeValid()" class="fa-solid fa-circle-xmark position-absolute h3 esc  "></i>
+        <p class=" mt-2 h3 text-center">"Your Data is not valid"</p>
+        <p class=" mt-2 h5 text-center">"You need to"</p>
+        <p class="text-white text-bg-danger rounded-3 p-2 mt-3 h6 text-center">"you must enter at least 3 characters in site name"</p>
+        <p class="text-white text-bg-danger rounded-3 p-2 mt-3 h6 text-center">"You need start (http:// or https://)www.example.(com or com/) in site URL"</p>
+      </div>
+    </div>
+
+    <div class="container text-center mt-5 m-auto">
+      <h1 class="mb-5">
+        BookMarker
+        <span class="bg-h1"></span>
+      </h1>
+      <div class="dot mb-4"></div>
+      <h2 class="mb-5">
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <p class="fw-bold text-primary text-start">
+        <i class="fa-solid fa-book-bookmark"></i> site name
+      </p>
+      <input
+        oninput="valid(this)"
+        id="URL"
+        class="form-control mb-3 w-100"
+        type="text"
+        placeholder="BookMark name"
+      />
+      <div class="alert alert-danger p-2 d-none">
+        you must enter at least 3 characters in the site name
+      </div>
+      <p class="fw-bold text-primary text-start">
+        <i class="fa-solid fa-link"></i> Site URL
+      </p>
+      <input
+        oninput="valid(this)"
+        id="Website"
+        class="form-control mb-3 w-100"
+        type="text"
+        placeholder="Web Site URL"
+      />
+      <div class="alert alert-danger p-2 d-none">
+        You need start (http:// or https://)www.example.(com or com/)
+      </div>
+
+      <button
+        type="submit"
+        onclick="addBookmark()"
+        class="btn mt-4 btn-primary btn-lg"
+      >
+        Submit
+      </button>
+      <div class="dot mt-5"></div>
+      <div
+        class="w-100 bg-white my-4 py-2 d-flex justify-content-around fw-bold"
+      >
+        <p class="m-0">Index</p>
+        <p class="m-0">Website Name</p>
+        <p class="m-0">Visit</p>
+        <p class="m-0">Delete</p>
+      </div>
+      <div id="cartonaa"></div>
+    </div>
+
+  </body>
+</html>
